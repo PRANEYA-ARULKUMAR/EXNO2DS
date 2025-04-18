@@ -131,14 +131,14 @@ sns.catplot(data=dt,col="Survived",x="Gender",hue="Pclass",kind="count")
 ![Screenshot 2025-04-18 103733](https://github.com/user-attachments/assets/718fb310-fc49-47bb-ad43-dba2a9164a6c)
 
 ```
-numeric_features = dt.select_dtypes(include=np.number)
-corr = numeric_features.corr()
-sns.heatmap(corr, annot=True)
+sns.pairplot(dt)
 ```
 ![Screenshot 2025-04-18 140831](https://github.com/user-attachments/assets/cbdce494-2ceb-447a-81bc-e1878bbce805)
 
 ```
-sns.pairplot(dt)
+numeric_features = dt.select_dtypes(include=np.number)
+corr = numeric_features.corr()
+sns.heatmap(corr, annot=True)
 ```
 ![Screenshot 2025-04-18 103745](https://github.com/user-attachments/assets/0e9f7b74-de91-41ec-83c1-c51e13055ada)
 
